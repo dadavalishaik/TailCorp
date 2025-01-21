@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import StartingPage from "./StartingPage";
+import Artificial from "./Artificial"
+import Cloud from "./Cloud";
+import Layout from "./components/Layout";
+import ProductDetails from "./productDetails";
+import Sap from "./Sap";
+import Neptune from "./Neptune";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<StartingPage />} />
+          <Route path="/artificial" element={<Artificial />} />
+          <Route path="/cloud" element={<Cloud/>}/>
+          <Route path="/neptune" element={<Neptune/>}/>
+          <Route path="/sap" element={<Sap/>}/>
+          <Route path="/product/:title" element={<ProductDetails/>}/>
+        </Routes>
+      </Layout>
+    </Router>
   );
-}
+};
 
 export default App;
