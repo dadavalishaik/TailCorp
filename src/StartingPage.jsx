@@ -326,7 +326,7 @@ const StartingPage = () => {
         >
           <div className="relative w-full max-w-screen-2xl p-8 grid grid-cols-1 lg:grid-cols-2 gap-8 overflow-hidden">
             <div className="flex flex-col text-center pt-8 lg:text-left">
-              <motion.h1 className="text-3xl lg:text-6xl mt-16 justify-center font-Poppins">
+              <motion.h1 className="text-3xl lg:text-4xl mt-16 justify-center font-Poppins">
                 <motion.div
                   initial={{ x: "-100vw" }}
                   animate={{ x: 0 }}
@@ -334,16 +334,31 @@ const StartingPage = () => {
                 >
                   Leading Company In Creating Powerful Software & Technology
                 </motion.div>
-                <div className="text-base lg:text-xl font-normal font-sans mt-8 lg:mt-28">
+
+
+
+                <div className="text-base lg:text-md font-normal font-sans mt-8 lg:mt-10">
                   AI and ML can both do a great deal of heavy lifting in web
                   development, especially around the automation of routine and
                   time-consuming tasks, which helps to improve design and
-                  accelerate the coding process. They can also help to add more
+                   accelerate the coding process.{/* They can also help to add more
                   personalisation to user experiences, enhance security,
                   optimise content delivery, and provide data-driven insights
-                  for ongoing improvements.
+                  for ongoing improvements. */}
                 </div>
               </motion.h1>
+
+              <div className="flex justify-center lg:justify-start gap-4 mt-4">
+                {/* Get Started Button */}
+                <button className="flex items-center px-6 py-3 bg-purple-600 text-white text-lg rounded-xl shadow-md  transition duration-300">
+                  Get Started
+                  <span className="ml-3">&#8594;</span> {/* Arrow Icon */}
+                </button>
+                {/* View Button */}
+                <button className="px-6 py-3 bg-white text-purple-600 text-lg rounded-xl border border-gray-300 shadow-md hover:bg-gray-100 transition duration-300">
+                  View
+                </button>
+              </div>
             </div>
             <div className="relative flex flex-col items-center justify-center h-auto lg:h-screen">
               <div className="w-full lg:w-auto lg:h-screen">
@@ -600,8 +615,8 @@ const StartingPage = () => {
             <div
               key={content}
               className={`cursor-pointer bg-gray-200 ${activeContent === content
-                  ? "bg-purple-500 text-white"
-                  : "hover:bg-purple-600 hover:text-white"
+                ? "bg-purple-500 text-white"
+                : "hover:bg-purple-600 hover:text-white"
                 } transition-colors duration-300 rounded-lg px-4 py-2`}
               onClick={() => handleClick(content)}
             >
@@ -673,8 +688,8 @@ const StartingPage = () => {
             </button>
             <button
               className={`text-black ${currentIndex >= products.length - 3
-                  ? "opacity-50 cursor-not-allowed"
-                  : ""
+                ? "opacity-50 cursor-not-allowed"
+                : ""
                 }`}
               onClick={handleNext}
               disabled={currentIndex >= products.length - 3}
