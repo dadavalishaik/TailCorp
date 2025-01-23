@@ -103,7 +103,7 @@ const StartingPage = () => {
       case "Data-Driven Insights":
         return "https://themeelite.com/demos/e-learn/static-header/images/graphic-design.jpg";
       case "Automation & Efficiency":
-        return "https://cxotoday.com/wp-content/uploads/2020/11/Automation_accenture.jpg";
+        return "https://miro.medium.com/v2/resize:fit:782/1*HykXElJEKHDtHjGHXNoXtA.jpeg";
       case "Personalized Experiences":
         return "https://themarketinghustle.com/wp-content/uploads/2024/01/An-image-showcasing-AI-enhancing-marketing-personalization-featuring-symbols-like-AI-algorithms-data-analytics-graphs-and-personalized-customer.png";
       case "Predictive Capabilities":
@@ -124,23 +124,23 @@ const StartingPage = () => {
       case "Data-Driven Insights":
         return (
           <>
-            <h3 className="text-2xl font-bold mb-2">Data-Driven Insights</h3>
-            <p className="text-lg">
-              AI and ML empower us to derive meaningful insights from vast
+            <h3 className="text-xl  font-lexendaGiga mb-2">Data-Driven Insights</h3>
+            <p className="text-sm text-gray-600 font-lexendaGiga">
+              &#8594;  AI and ML empower us to derive meaningful insights from vast
               amounts of data, enabling businesses to make informed decisions
               swiftly and accurately.
             </p>
-            <p className="text-lg">
-              In graphics designing place it means right side to the image.
+            <p className="text-sm text-gray-600 font-lexendaGiga">
+              &#8594; In graphics designing place it means right side to the image.
             </p>
           </>
         );
       case "Automation & Efficiency":
         return (
           <>
-            <h3 className="text-2xl font-bold mb-2">Automation & Efficiency</h3>
-            <p className="text-lg">
-              By automating repetitive tasks and optimizing processes, AI and ML
+            <h3 className="text-xl  font-lexendaGiga mb-2">Automation & Efficiency</h3>
+            <p className="text-sm text-gray-600 font-lexendaGiga ">
+              &#8594; By automating repetitive tasks and optimizing processes, AI and ML
               free up human capital to focus on creativity, problem-solving, and
               innovation.
             </p>
@@ -149,11 +149,11 @@ const StartingPage = () => {
       case "Personalized Experiences":
         return (
           <>
-            <h3 className="text-2xl font-bold mb-2">
+            <h3 className="text-xl font-lexendaGiga mb-2">
               Personalized Experiences
             </h3>
-            <p className="text-lg">
-              From personalized recommendations to tailored customer
+            <p className="text-sm text-gray-600 font-lexendaGiga">
+              &#8594; From personalized recommendations to tailored customer
               interactions, AI and ML are reshaping how businesses engage with
               their audience, enhancing customer satisfaction and loyalty.
             </p>
@@ -162,9 +162,9 @@ const StartingPage = () => {
       case "Predictive Capabilities":
         return (
           <>
-            <h3 className="text-2xl font-bold mb-2">Predictive Capabilities</h3>
-            <p className="text-lg">
-              By analyzing patterns and trends, AI and ML enable organizations
+            <h3 className="text-xl font-lexendaGiga  mb-2">Predictive Capabilities</h3>
+            <p className="text-sm text-gray-600 font-lexendaGiga">
+              &#8594; By analyzing patterns and trends, AI and ML enable organizations
               to anticipate future outcomes, mitigate risks, and seize
               opportunities proactively.
             </p>
@@ -173,9 +173,9 @@ const StartingPage = () => {
       case "Transforming Industries":
         return (
           <>
-            <h3 className="text-2xl font-bold mb-2">Transforming Industries</h3>
-            <p className="text-lg">
-              From healthcare and finance to transportation and entertainment,
+            <h3 className="text-xl font-lexendaGiga  mb-2">Transforming Industries</h3>
+            <p className="text-sm text-gray-600 font-lexendaGiga">
+              &#8594;  From healthcare and finance to transportation and entertainment,
               AI and ML are revolutionizing every sector, driving efficiency,
               productivity, and growth.
             </p>
@@ -184,9 +184,9 @@ const StartingPage = () => {
       case "Ethical Considerations":
         return (
           <>
-            <h3 className="text-2xl font-bold mb-2">Ethical Considerations</h3>
-            <p className="text-lg">
-              As we harness the power of AI and ML, it's crucial to prioritize
+            <h3 className="text-xl font-lexendaGiga mb-2">Ethical Considerations</h3>
+            <p className="text-sm text-gray-600 font-lexendaGiga">
+              &#8594;  As we harness the power of AI and ML, it's crucial to prioritize
               ethical principles, ensuring transparency, fairness, and
               accountability in our algorithms and decision-making processes.
             </p>
@@ -195,9 +195,9 @@ const StartingPage = () => {
       case "Continuous Innovation":
         return (
           <>
-            <h3 className="text-2xl font-bold mb-2">Continuous Innovation</h3>
-            <p className="text-lg">
-              The field of AI and ML is evolving rapidly, presenting endless
+            <h3 className="text-xl font-lexendaGiga mb-2">Continuous Innovation</h3>
+            <p className="text-sm text-gray-600 font-lexendaGiga">
+              &#8594; The field of AI and ML is evolving rapidly, presenting endless
               possibilities for innovation and discovery. Embracing a culture of
               lifelong learning and adaptation is key to staying ahead in this
               dynamic landscape.
@@ -228,60 +228,6 @@ const StartingPage = () => {
     };
   }, [showScroll]);
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const sections = document.querySelectorAll("section");
-  //     let currentSection = "";
-
-  //     sections.forEach((section) => {
-  //       const sectionTop = section.offsetTop;
-  //       if (window.pageYOffset >= sectionTop - 60) {
-  //         currentSection = section.getAttribute("id");
-  //       }
-  //     });
-
-  //   setActiveLink(currentSection);
-  //   updateUnderline(currentSection);
-  // };
-
-  // const updateUnderline = (currentSection) => {
-  //   const activeLinkElement = document.querySelector(
-  //     `a[data-target="${currentSection}"]`
-  //   );
-  //   if (activeLinkElement) {
-  //     const { offsetLeft: left, offsetWidth: width } = activeLinkElement;
-  //     setUnderlineStyle({ left, width });
-  //   }
-  // };
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   handleScroll();
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
-  // const handleScroll = () => {
-  //   console.log("Scroll event detected");
-
-  // };
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     handleNext();
-  //   }, 4000); // Change product every 3 seconds
-
-  //   const welcomeAnimationTimeout = setTimeout(() => {
-  //     setWelcomeAnimation(true);
-  //   }, 1000);
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //     clearTimeout(welcomeAnimationTimeout);
-  //   };
-  // }, [controls]);
 
   useEffect(() => {
     const handleSmoothScroll = (event) => {
@@ -318,46 +264,54 @@ const StartingPage = () => {
   }, []);
 
   return (
-    <div>
-      <div className="min-h-screen mt-8 bg-white">
+    <div >
+      <div className="min-h-screen mt-8 bg-white ">
         <section
           id="home"
           className="h-fit w-full flex justify-center items-center mt-12 bg-white"
         >
           <div className="relative w-full max-w-screen-2xl p-8 grid grid-cols-1 lg:grid-cols-2 gap-8 overflow-hidden">
             <div className="flex flex-col text-center pt-8 lg:text-left">
-              <motion.h1 className="text-3xl lg:text-4xl mt-16 justify-center font-Poppins">
+              <motion.h1 className="text-3xl lg:text-2xl mt-16 justify-center font-lexendaGiga">
                 <motion.div
-                  initial={{ x: "-100vw" }}
-                  animate={{ x: 0 }}
-                  transition={{ duration: 0.75 }}
+                  initial={{ y: "-100vw" }}
+                  animate={{ y: 0 }}
+                  transition={{ duration: 1 }}
                 >
                   Leading Company In Creating Powerful Software & Technology
                 </motion.div>
 
-
-
-                <div className="text-base lg:text-md font-normal font-sans mt-8 lg:mt-10">
-                  AI and ML can both do a great deal of heavy lifting in web
-                  development, especially around the automation of routine and
-                  time-consuming tasks, which helps to improve design and
-                   accelerate the coding process.{/* They can also help to add more
-                  personalisation to user experiences, enhance security,
-                  optimise content delivery, and provide data-driven insights
-                  for ongoing improvements. */}
-                </div>
+                <motion.div
+                  initial={{ x: "-100vw" }}
+                  animate={{ x: 0 }}
+                  transition={{ duration: 1 }}
+                  className="text-base lg:text-sm font-lexendaGiga mt-8 lg:mt-10">
+                  &#8594; AI and ML can both do a great deal of heavy lifting in web
+                  development, especially around the automation of routine.
+                  {/* time-consuming tasks, which helps to improve design and
+                  accelerate the coding process. */}
+                </motion.div>
               </motion.h1>
 
-              <div className="flex justify-center lg:justify-start gap-4 mt-4">
-                {/* Get Started Button */}
-                <button className="flex items-center px-6 py-3 bg-purple-600 text-white text-lg rounded-xl shadow-md  transition duration-300">
+              <div className="flex justify-center lg:justify-start gap-4 mt-6">
+
+                <motion.div
+                  initial={{ y: "100vw" }}
+                  animate={{ y: 2 }}
+                  transition={{ duration: 4 }}
+                  className="flex items-center px-6 py-3 bg-purple-600 font-lexendaGiga text-white text-md rounded-xl shadow-md  hover:bg-purple-700 transition duration-300">
                   Get Started
-                  <span className="ml-3">&#8594;</span> {/* Arrow Icon */}
-                </button>
-                {/* View Button */}
-                <button className="px-6 py-3 bg-white text-purple-600 text-lg rounded-xl border border-gray-300 shadow-md hover:bg-gray-100 transition duration-300">
+                  <span className="ml-3">&#8594;</span>
+                </motion.div>
+
+                <motion.div
+                  initial={{ y: "100vw" }}
+                  animate={{ y: 2 }}
+                  transition={{ duration: 4 }}
+
+                  className="px-6 py-3 bg-white text-purple-600 font-lexendaGiga text-md rounded-xl border border-gray-300 shadow-md hover:bg-gray-100 transition duration-300">
                   View
-                </button>
+                </motion.div>
               </div>
             </div>
             <div className="relative flex flex-col items-center justify-center h-auto lg:h-screen">
@@ -378,7 +332,7 @@ const StartingPage = () => {
           }`}
       >
         <button
-          className="bg-blue-600 p-3 rounded-full text-white shadow-md hover:bg-blue-700 transition duration-300"
+          className="bg-purple-600 p-3 rounded-full text-white shadow-md hover:bg-purple-700 transition duration-300"
           onClick={scrollTop}
         >
           <FaArrowUp size={24} />
@@ -392,19 +346,19 @@ const StartingPage = () => {
       >
         <div className="flex flex-col">
           {/* Heading */}
-          <h3 className="text-4xl font-semibold font-Georgia font-serif mb-4">
+          <h3 className="text-3xl font-lexendaGiga  mb-4">
             What We Offer
           </h3>
 
           {/* First Line: Text and Image */}
           <div className="flex flex-col md:flex-row items-center">
             <motion.h2
-              className="text-xl font-normal font-sans md:w-3/6 mb-4 md:mb-0"
+              className="text-sm font-lexendaGiga font-extralight md:w-3/6 mb-4 md:mb-0"
               animate={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -20 }}
               transition={{ delay: 0.2, duration: 0.5 }}
             >
-              Artificial Intelligence & Machine Learning Solutions at TAIL, we
+              &#8594; Artificial Intelligence & Machine Learning Solutions at TAIL, we
               leverage cutting-edge AI and ML technologies to empower your
               business with smarter, data-driven solutions.
             </motion.h2>
@@ -423,14 +377,14 @@ const StartingPage = () => {
           </div>
 
           {/* Second Line: Text and Talk With Us */}
-          <div className="flex flex-col md:flex-row items-center mt-4">
+          <div className="flex flex-col md:flex-row items-center mt-4 space-x-2">
             <motion.p
-              className="font-normal font-sans text-xl md:w-1/2 mb-4 md:mb-0"
+              className="font-lexendaGiga text-sm md:w-1/2 mb-4 md:mb-0"
               animate={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -20 }}
               transition={{ delay: 0.6, duration: 0.5 }}
             >
-              We are a digital transformation firm that provides cutting-edge
+              &#8594; We are a digital transformation firm that provides cutting-edge
               solutions to a number of companies and technology startups. We
               assist businesses in reducing risk, increasing compliance,
               retaining loyal consumers, controlling expenses, attracting top
@@ -440,21 +394,21 @@ const StartingPage = () => {
               data-driven solutions.
             </motion.p>
             <motion.div
-              className="bg-gray-200 text-black p-2 rounded-lg md:w-1/2 border border-gray-200 shadow-lg"
+              className="bg-gray-200 text-black p-2 rounded-lg md:w-1/2 border border-gray-200 shadow-xl"
               animate={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: 20 }}
               transition={{ delay: 0.8, duration: 0.5 }}
             >
-              <div className="text-2xl font-semibold mb-2">Talk With Us</div>
-              <p className="font-normal font-sans text-xl">
+              <div className="text-2xl font-lexendaGiga mb-2">Talk With Us</div>
+              <p className="font-lexendaGiga text-sm">
                 Our TAIL assists businesses in creating a digital future that is
                 thoughtfully built. Tell us about your concept, and we will
                 recommend the best technology solution for you.
               </p>
               <div className="relative mt-4">
                 <div className="absolute inset-0 rounded-lg"></div>
-                <button className="font-normal font-sans relative bg-blue-500 text-white px-4 py-2 rounded">
-                  <a href="#contact" className="text-white text-xl">
+                <button className="font-lexendaGiga relative bg-purple-600 text-white px-4 py-2 rounded">
+                  <a href="#contact" className="text-white text-sm ">
                     Contact us
                   </a>
                 </button>
@@ -465,7 +419,7 @@ const StartingPage = () => {
 
         {/* Technology Showcase Section */}
         <div className="pt-8">
-          <div className="text-center text-[32px] font-medium font-Georgia font-serif mb-8">
+          <div className="text-center text-[32px] font-medium font-lexendGiga  mb-8">
             Transform your business with advanced technologies
           </div>
           <div className="flex flex-wrap justify-center gap-4">
@@ -479,7 +433,7 @@ const StartingPage = () => {
                   src="https://www.tcs.com/content/dam/global-tcs/en/images/insights/topics/cybersecurity/cyber-security-ai-ml-attack-card.jpg/jcr:content/renditions/cq5dam.thumbnail.1280.765.jpeg"
                   alt="Sap"
                 />
-                <h1 className="absolute inset-0 flex items-center justify-center text-white bg-black bg-opacity-50 p-2 rounded-lg">
+                <h1 className="absolute inset-0 flex items-center justify-center text-white bg-black bg-opacity-50 p-2 font-lexendaGiga rounded-lg">
                   SAP
                 </h1>
               </motion.div>
@@ -495,7 +449,7 @@ const StartingPage = () => {
                   className="h-full w-full object-cover border rounded-lg"
                   alt="Artificial Intelligence"
                 />
-                <h1 className="absolute inset-0 flex items-center justify-center text-white bg-black bg-opacity-50 p-2 rounded-lg">
+                <h1 className="absolute inset-0 flex items-center justify-center text-white bg-black bg-opacity-50 p-2 rounded-lg  font-lexendaGiga">
                   Artificial Intelligence
                 </h1>
               </motion.div>
@@ -511,7 +465,7 @@ const StartingPage = () => {
                   src="https://diginomica.com/sites/default/files/images/2019-01/neptune-software-logo.png"
                   alt="Neptune - planet 9"
                 />
-                <h1 className="absolute inset-0 flex items-center justify-center text-white bg-black bg-opacity-50 p-2 rounded-lg">
+                <h1 className="absolute inset-0 flex items-center justify-center font-lexendaGiga text-white bg-black bg-opacity-50 p-2 rounded-lg font-lexendaGiga ">
                   Neptune - Planet 9
                 </h1>
               </motion.div>
@@ -527,7 +481,7 @@ const StartingPage = () => {
                   src="https://www.tcs.com/content/dam/global-tcs/en/images/what-we-do/services/cyber-security/blogs/cloud-security-automation-cyber-hygiene-card-1330x1270.jpg/jcr:content/renditions/cq5dam.thumbnail.1280.765.jpeg"
                   alt="Cloud"
                 />
-                <h1 className="absolute inset-0 flex items-center justify-center text-white bg-black bg-opacity-50 p-2 rounded-lg">
+                <h1 className="absolute inset-0 flex items-center justify-center text-white bg-black bg-opacity-50 p-2 rounded-lg font-lexendaGiga">
                   Cloud
                 </h1>
               </motion.div>
@@ -541,7 +495,7 @@ const StartingPage = () => {
         id="services"
         className="h-auto mt-2 rounded-xl bg-purple-500 py-12"
       >
-        <p className="font-semibold font-Georgia font-serif text-4xl text-white ml-4 pt-4 text-left">
+        <p className=" font-lexendaGiga  text-4xl text-white ml-4 pt-4 text-left">
           SERVICES
         </p>
         <div className="flex justify-center items-center mt-12">
@@ -551,7 +505,7 @@ const StartingPage = () => {
             className="w-full max-w-4xl border rounded-lg"
           />
         </div>
-        <div className="mx-auto mt-3 py-4 bg-white text-center text-black border rounded-lg text-xl max-w-4xl">
+        <div className="mx-auto mt-3 py-4 bg-white text-center text-black border rounded-lg text-xl max-w-4xl font-lexendaGiga">
           ARTIFICIAL INTELLIGENCE MEETS HUMAN CREATIVITY
         </div>
         <div className="flex flex-col md:flex-row gap-3 justify-center items-center pt-12 pb-12">
@@ -560,10 +514,10 @@ const StartingPage = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           >
-            <img className="h-32" src={leftbrain} alt="ai" />
+            <img className="h-28" src={leftbrain} alt="ai" />
             <div className="pt-4 md:pt-0 sm:pl-4 text-gray-500">
-              <p className="font-bold text-lg">Artificial intelligence</p>
-              <p>
+              <p className="font-bold font-lexendaGiga text-md">Artificial intelligence</p>
+              <p className=" font-lexendaGiga text-sm">
                 AI is the simulation of human intelligence in machines designed
                 to think and act like humans.
               </p>
@@ -582,8 +536,8 @@ const StartingPage = () => {
             transition={{ duration: 0.3 }}
           >
             <div className="pt-4 md:pt-0 md:pl-4 text-gray-500">
-              <p className="font-bold text-lg">Machine Learning</p>
-              <p>
+              <p className="font-bold font-lexendaGiga text-md">Machine Learning</p>
+              <p className="font-lexendaGiga text-sm">
                 ML is a subset of AI that enables systems to learn from data,
                 identify patterns, and make decisions with minimal human
                 intervention.
@@ -598,11 +552,11 @@ const StartingPage = () => {
         </div>
       </section>
 
-      <div className="text-4xl font-semibold font-Georgia font-serif ml-6 pb-0 pt-4">
+      <div className="text-4xl font-lexendaGiga ml-6 pb-0 pt-4">
         <p>Insights</p>
       </div>
       <div className="py-6 px-6 bg-white flex flex-col lg:flex-row items-center font-semibold font-sans">
-        <div className="lg:w-1/4 text-black space-y-4">
+        <div className="lg:w-1/4 text-black space-y-4 ">
           {[
             "Data-Driven Insights",
             "Automation & Efficiency",
@@ -615,12 +569,12 @@ const StartingPage = () => {
             <div
               key={content}
               className={`cursor-pointer bg-gray-200 ${activeContent === content
-                ? "bg-purple-500 text-white"
-                : "hover:bg-purple-600 hover:text-white"
+                ? "bg-purple-500 text-white "
+                : "hover:bg-purple-600 hover:text-white "
                 } transition-colors duration-300 rounded-lg px-4 py-2`}
               onClick={() => handleClick(content)}
             >
-              <h3 className="text-xl font-normal font-sans mb-2">{content}</h3>
+              <h3 className="text-md  mb-2 font-lexendaGiga">{content}</h3>
             </div>
           ))}
         </div>
@@ -767,7 +721,7 @@ const StartingPage = () => {
           </div>
 
           <div className="text-center font-sans mt-12 text-lg">
-            <p>&copy; 2024 Tail Theme. All Rights Reserved</p>
+            <p>&copy; 2025 Tail Theme. All Rights Reserved</p>
           </div>
         </div>
       </section>

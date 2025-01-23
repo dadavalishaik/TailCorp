@@ -4,54 +4,86 @@
 
 /* Add this to your CSS file */
 
+/* added for roboto fileSlabs*/
+@font-face {
+  font-family: 'RobotoSlab';
+  src: url('./assets/RobotoSlab-Black.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LexendaGiga';
+  src: url('./assets/LexendGiga-Black.ttf') format('truetype');
+  font-weight: 200; /* Black weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LexendaGiga';
+  src: url('./assets/LexendGiga-ExtraLight.ttf') format('truetype');
+  font-weight: 200; /* Black weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LexendaGiga';
+  src: url('./assets/LexendGiga-Medium.ttf') format('truetype');
+  font-weight: 200; /* Black weight */
+  font-style: normal;
+}
+
+
 
 .underline-animation {
-    position: relative;
+  position: relative;
 }
 
 .underline-animation::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px; 
-    bottom: 0;
-    left: 0;
-    background-color: currentColor;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
 }
 
 .underline-animation:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .fixed-navbar {
-    top: 0;
-    left: 0;
-    width: 100%;
-    position: fixed;
-    z-index: 50; /* This ensures the navbar stays on top */
-  }
-  
-  .fixed-navbar.scrolled {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-  
-  .sidebar {
-    top: 0;
-    left: 0;
-    height: 100%;
-    background-color: black;
-    color: white;
-    z-index: 50;
-    transition: transform 0.3s ease-in-out;
-    clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 65%);
-  }
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.fixed-navbar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 50;
+  /* This ensures the navbar stays on top */
+}
+
+.fixed-navbar.scrolled {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.sidebar {
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: black;
+  color: white;
+  z-index: 50;
+  transition: transform 0.3s ease-in-out;
+  clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 65%);
+}

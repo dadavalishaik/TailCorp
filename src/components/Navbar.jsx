@@ -53,25 +53,30 @@ function Navbar() {
   return (
     <header className="w-full text-black font-normal font-sans fixed top-0 z-50">
       <nav
-        className={`fixed-navbar ${isScrolled ? "scrolled" : ""
-          } flex justify-between items-center px-4 py-4 bg-white font-normal font-sans transition-all duration-300 rounded-xl w-full`}
+        className={`fixed-navbar ${isScrolled ? "bg-white/80 backdrop-blur-2xl shadow-lg" : "bg-transparent backdrop-blur-xl"
+          } flex justify-between items-center px-4 py-4 font-normal font-sans transition-all duration-300 rounded-xl w-full`}
       >
-        <div className="flex items-center text-4xl">
+
+        <div className="flex items-center text-lg">
           <GiHamburgerMenu
             className="w-8 h-8 text-purple-600 cursor-pointer mr-4"
             onClick={toggleSidebar}
           />
           <img src={task} alt="logo" className="w-14 h-12" />
-          <p className="text-black font-sans ml-2">TAIL CORP</p>
+
+          <p className="text-black font-lexendaGiga  text-2xl ml-2">
+            TAIL CORP
+          </p>
+
         </div>
-        <ul className="hidden md:flex space-x-8 text-2xl">
+        <ul className="hidden md:flex space-x-4 text-md">
           {["home", "about", "services", "products", "contact"].map((link) => (
             <li
               key={link}
               className={`cursor-pointer ${activeSection === link
-                  ? "bg-purple-600 text-white"
-                  : "text-black hover:bg-purple-600 hover:text-white"
-                } py-2 px-4 rounded transition-colors duration-300`}
+                ? "bg-purple-600 text-white"
+                : "text-black hover:bg-purple-600 hover:text-white font-lexendaGiga  text-sm"
+                } py-2 px-4 rounded transition-colors duration-300 font-lexendaGiga text-sm`}
               onClick={() => handleNavigation(link)}
             >
               <Link to={`/#${link}`}>{link.charAt(0).toUpperCase() + link.slice(1)}</Link>
@@ -83,8 +88,8 @@ function Navbar() {
       {/* Sidebar */}
       <div
         className={`fixed top-0 left-0 h-full bg-purple-600 text-white z-50 transition-transform duration-300 ease-in-out ${isSidebarOpen
-            ? "transform translate-x-0 w-1/2"
-            : "transform -translate-x-full"
+          ? "transform translate-x-0 w-1/2"
+          : "transform -translate-x-full"
           }`}
         style={{
           clipPath: "polygon(0 0, 100% 0, 70% 100%, 0 100%)",
@@ -97,13 +102,13 @@ function Navbar() {
           />
         </div>
         <div className="w-[70%] text-center">
-          <ul className="mt-8 font-normal font-sans text-2xl">
+          <ul className="mt-8 font-lexendGiga text-lg">
             {["home", "about", "services", "products", "contact"].map((link) => (
               <li
                 key={link}
                 className={`py-4 pl-2 justify-between mb-2 ml-4 rounded-full cursor-pointer ${activeSection === link
-                    ? "bg-gray-800"
-                    : "hover:bg-gray-800"
+                  ? "bg-gray-800"
+                  : "hover:bg-gray-800"
                   }`}
                 onClick={() => handleNavigation(link)}
               >
