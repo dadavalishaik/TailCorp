@@ -65,7 +65,7 @@ const StartingPage = () => {
     {
       title: "API Genesis",
       imgSrc:
-        "https://media.istockphoto.com/id/1401675711/photo/application-programming-interface.jpg?s=612x612&w=0&k=20&c=NsPJqGauPF0J8bEA38s6LED9HgBvhjKNLiel4czxwFc=",
+        "https://www.avidxchange.com/wp-content/smush-webp/2020/08/GettyImages-1205896326-1024x683.jpg.webp",
     },
     {
       title: "Label Designer",
@@ -78,25 +78,48 @@ const StartingPage = () => {
     },
   ];
 
+  // const handlePrev = () => {
+  //   setCurrentIndex((prevIndex) =>
+  //     prevIndex === 0 ? products.length - 3 : prevIndex - 1
+  //   );
+  // };
+
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? products.length - 3 : prevIndex - 1
+      prevIndex === 0 ? products.length - 1 : prevIndex - 1
     );
   };
+
+  // const handleNext = () => {
+  //   setCurrentIndex((prevIndex) =>
+  //     prevIndex === products.length - 3 ? 0 : prevIndex + 1
+  //   );
+  // };
+
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === products.length - 3 ? 0 : prevIndex + 1
+      prevIndex === products.length - 1 ? 0 : prevIndex + 1
     );
   };
 
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     handleNext();
+  //   }, 3000); // Change the interval time as needed
+
+  //   return () => clearInterval(interval);
+  // }, [products.length]);
+
+
+  //added for product caruosel
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
-    }, 3000); // Change the interval time as needed
+    }, 3000);
 
-    return () => clearInterval(interval);
-  }, [products.length]);
+    return () => clearInterval(interval); // Clear interval on unmount
+  }, [currentIndex]);
 
   const getImageUrl = () => {
     switch (activeContent) {
@@ -265,7 +288,7 @@ const StartingPage = () => {
 
   return (
     <div >
-      <div className="min-h-screen mt-8 bg-white ">
+      <div className="min-h-screen  bg-white ">
         <section
           id="home"
           className="h-fit w-full flex justify-center items-center mt-12 bg-white"
@@ -496,7 +519,7 @@ const StartingPage = () => {
         className="h-auto mt-2 rounded-xl bg-purple-500 py-12"
       >
         <p className=" font-lexendaGiga  text-4xl text-white ml-4 pt-4 text-left">
-          SERVICES
+          Services
         </p>
         <div className="flex justify-center items-center mt-12">
           <img
@@ -552,7 +575,7 @@ const StartingPage = () => {
         </div>
       </section>
 
-      <div className="text-4xl font-lexendaGiga ml-6 pb-0 pt-4">
+      <div className="text-4xl font-lexendaGiga ml-6 pb-0 py-12">
         <p>Insights</p>
       </div>
       <div className="py-6 px-6 bg-white flex flex-col lg:flex-row items-center font-semibold font-sans">
@@ -600,7 +623,7 @@ const StartingPage = () => {
         )}
       </div>
 
-      <section
+      {/* <section
         id="products"
         className="py-16 px-6 bg-gray-200 font-semibold font-Georgia font-serif rounded-xl"
       >
@@ -608,7 +631,7 @@ const StartingPage = () => {
           <h2 className="text-left text-black text-4xl font-semibold">
             PRODUCTS
           </h2>
-          {/* <p className="text-left text-black text-2xl font-medium mt-8">These all are our Products</p> */}
+         
         </div>
         <div className="relative flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0">
           {products
@@ -652,6 +675,62 @@ const StartingPage = () => {
             </button>
           </div>
         </div>
+      </section> */}
+
+      <section
+        id="products"
+        className="py-16 px-6 bg-gray-200 font-lexendaGiga rounded-xl relative"
+      >
+        <div className="w-full mb-8">
+          <h2 className="text-left text-black text-3xl ">
+            Products
+          </h2>
+        </div>
+
+        {/* Carousel Container */}
+        <div className="relative flex items-center justify-center">
+          {/* Left Arrow */}
+          <button
+            className={` left-6 text-3xl font-bold ${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : ""
+              }`}
+            onClick={handlePrev}
+            disabled={currentIndex === 0}
+          >
+            &larr;
+          </button>
+
+          {/* Product Display */}
+          <div className="w-1/4 flex justify-center">
+            <div
+              key={currentIndex}
+              className="relative bg-black cursor-pointer transition-transform duration-300 transform hover:scale-105 rounded-lg"
+            >
+              <Link to={`/product/${encodeURIComponent(products[currentIndex].title)}`}>
+                <img
+                  src={products[currentIndex].imgSrc}
+                  alt={products[currentIndex].title}
+                  className="rounded-lg shadow-lg w-full h-48 md:h-full object-cover"
+                />
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-lg font-bold">{products[currentIndex].title}</h3>
+                  <span className="text-sm underline">READ MORE</span>
+                </div>
+              </Link>
+            </div>
+          </div>
+
+          {/* Right Arrow */}
+          <button
+            className={` right-4 text-3xl font-bold ${currentIndex === products.length - 1
+              ? "opacity-50 cursor-not-allowed"
+              : ""
+              }`}
+            onClick={handleNext}
+            disabled={currentIndex === products.length - 1}
+          >
+            &rarr;
+          </button>
+        </div>
       </section>
 
       <section
@@ -659,36 +738,35 @@ const StartingPage = () => {
         className="py-16 px-4 mt-2 bg-purple-600 text-white font-Georgia font-serif rounded-xl"
       >
         <div className="mb-16 text-left md:text-left">
-          <h2 className="text-4xl font-bold">ABOUT US</h2>
+          <h2 className="text-3xl font-lexendaGiga">About Us</h2>
         </div>
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-lg">
-              <h2 className="text-2xl font-sans font-bold mb-2">
-                TAIL AI Products
+              <h2 className="text-xl font-lexendaGiga font-bold mb-2">
+                Tail AI Products
               </h2>
-              <ul className="font-sans">
-                <li>RULE ENGINE</li>
-                <li>LABEL DESIGNER</li>
-                <li>API GENISIS</li>
-                <li>TOUCHLESS APP</li>
-                {/* <li>ASSET MANAGEMENT</li> */}
+              <ul className="font-lexendaGiga text-sm ">
+                <li>&#8594; RULE ENGINE</li>
+                <li>&#8594; LABEL DESIGNER</li>
+                <li>&#8594; API GENISIS</li>
+                <li>&#8594; TOUCHLESS APP</li>
               </ul>
-              <h2 className="text-2xl font-sans font-bold mt-12">
-                OUR PARTNERS
+              <h2 className="text-xl font-lexendaGiga font-bold mt-12">
+                Our Partners
               </h2>
               <ul>
-                <li className="mt-2 text-lg font-sans">
-                  JHONSON & JHONSON
+                <li className="mt-2 text-sm font-lexendaGiga">
+                  &#8594; JHONSON & JHONSON
                   <br />
-                  HERITAGE
+                  &#8594; HERITAGE
                 </li>
               </ul>
             </div>
 
             <div>
-              <h2 className="text-2xl font-sans font-bold mb-2">Locations</h2>
-              <ul className="text-lg font-sans">
+              <h2 className="text-xl  font-lexendaGiga font-bold mb-2">Locations</h2>
+              <ul className="text-sm font-lexendaGiga">
                 <li>
                   India
                   <br />
@@ -698,7 +776,7 @@ const StartingPage = () => {
                   <br />
                   Hyderabad - 500038
                 </li>
-                <li className="mt-16 text-lg">
+                <li className="mt-16 text-sm">
                   Frisco, Texas
                   <br />
                   USA
@@ -708,19 +786,19 @@ const StartingPage = () => {
             </div>
 
             <div>
-              <h2 className="text-2xl font-sans font-bold mb-2">Contact us</h2>
-              <div className="text-lg font-sans">
+              <h2 className="text-xl  font-lexendaGiga  font-bold mb-2">Contact us</h2>
+              <div className="text-sm font-lexendaGiga">
                 <p>hrsupport@tail.com</p>
                 <p>(+91) 8121219737</p>
               </div>
-              <p className="text-lg mt-32 font-sans">
+              <p className="text-sm mt-32 font-lexendaGiga">
                 Subscribe to get emails about new products and features from
                 TAIL CORP
               </p>
             </div>
           </div>
 
-          <div className="text-center font-sans mt-12 text-lg">
+          <div className="text-center font-lexendaGiga mt-12 text-sm">
             <p>&copy; 2025 Tail Theme. All Rights Reserved</p>
           </div>
         </div>

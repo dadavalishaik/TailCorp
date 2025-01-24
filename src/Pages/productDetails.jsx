@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import Label from "../src/assets/Label.png";
+import Label from "../assets/Label.png";
 
 const productImages = {
   "Rule Engine":

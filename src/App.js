@@ -1,17 +1,17 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import StartingPage from "./StartingPage";
-import Artificial from "./Artificial"
-import Cloud from "./Cloud";
+import Artificial from "./Pages/Artificial";
+import Cloud from "./Pages/Cloud";
 import Layout from "./components/Layout";
-import ProductDetails from "./productDetails";
-import Sap from "./Sap";
-import Neptune from "./Neptune";
+import ProductDetails from "./Pages/productDetails";
+import Sap from "./Pages/Sap";
+import Neptune from "./Pages/Neptune";
 
 const App = () => {
   return (
     <Router>
-      <Layout>
+      <Layout >
         <Routes>
           <Route path="/" element={<StartingPage />} />
           <Route path="/artificial" element={<Artificial />} />

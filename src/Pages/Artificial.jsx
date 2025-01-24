@@ -8,7 +8,7 @@ const Ai = () => {
   }, []);
 
   return (
-    <div className="font-serif font-Georgia">
+    <div className=" font-serif font-Georgia">
       <div className="flex flex-col relative min-h-screen">
         <h1 className="text-3xl font-semibold pl-6 pt-12 pb-2">
           Artificial Intelligence
