@@ -9,7 +9,7 @@ const Cloud = () => {
 
   return (
     <div className="mt-6 px-4 md:px-8 lg:px-16">
-      <h1 className="text-2xl md:text-3xl lg:text-4xl pt-8 font-serif">
+      <h1 className="text-xl md:text-2xl lg:text-2xl pt-8 font-lexendaGiga">
         Maximizing Business Continuity with a Multi-Cloud Approach
       </h1>
       <div className="flex justify-center pt-4">

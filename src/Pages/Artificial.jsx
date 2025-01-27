@@ -8,9 +8,9 @@ const Ai = () => {
   }, []);
 
   return (
-    <div className=" font-serif font-Georgia">
+    <div className=" ">
       <div className="flex flex-col relative min-h-screen">
-        <h1 className="text-3xl font-semibold pl-6 pt-12 pb-2">
+        <h1 className="text-xl font-semibold font-lexendaGiga pl-6 pt-12 pb-2">
           Artificial Intelligence
         </h1>
         <div className="flex-1 relative">
@@ -19,7 +19,7 @@ const Ai = () => {
             src="/AnimatedVideo.gif"
             alt="Animated GIF"
           />
-          <h1 className="absolute top-0 left-1/2 transform -translate-x-1/2 text-white font-sans text-2xl md:text-4xl p-4 md:p-16 text-center">
+          <h1 className="absolute top-0 left-1/2 transform -translate-x-1/2 text-white font-lexendaGiga text-2xl md:text-2xl p-4 md:p-16 text-center">
             The future is AI. The future is human
           </h1>
         </div>
@@ -33,10 +33,10 @@ const Ai = () => {
               />
             </div>
             <div>
-              <h1 className="font-bold text-xl md:text-2xl text-center lg:text-left">
+              <h1 className="font-bold font-lexendaGiga text-xl md:text-2xl text-center lg:text-left">
                 Why people need AI. Why AI <br className="hidden lg:block" /> needs people.
               </h1>
-              <p className="pt-6 md:pt-12 text-base md:text-xl font-sans font-poppins text-center lg:text-left">
+              <p className="pt-6 md:pt-12 text-base md:text-md font-lexendaGiga text-gray-700 text-center lg:text-left">
                 The advent of generative AI expands the arc of <br className="hidden lg:block" />{" "}
                 traditional machine learning and AI, which is one of <br className="hidden lg:block" />{" "}
                 recognition and reasoning intelligence, to create an <br className="hidden lg:block" />{" "}
@@ -48,7 +48,7 @@ const Ai = () => {
               </p>
             </div>
           </div>
-          <div className="pt-12 text-base md:text-xl font-normal font-sans text-justify px-4 md:mx-32">
+          <div className="pt-12 text-base md:text-md font-lexendaGiga text-gray-700 text-justify px-4 md:mx-32">
             Artificial intelligence (AI) has many different definitions; some
             see it as the created technology that allows computers and machines
             to function intelligently. Some see it as the machine that replaces

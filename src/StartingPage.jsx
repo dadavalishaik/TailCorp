@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import Aiimage from "../src/assets/aiimage.png";
 import "./index.css";
 import { FaArrowUp } from "react-icons/fa";
-import leftbrain from "../src/assets/leftbrain.jpg";
-import midbrain from "../src/assets/midbrain.png";
 import { Link } from "react-router-dom";
-
+import About from "./Pages/About";
 import { useNavigate } from "react-router-dom";
+import Services from "./Pages/Services";
+import Insight from "./Pages/Insight";
+import Contact from "./Pages/Contact";
 
 const StartingPage = () => {
   // const [welcomeAnimation, setWelcomeAnimation] = useState(false);
@@ -16,7 +16,7 @@ const StartingPage = () => {
   // const controls = useAnimation();
   // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeContent, setActiveContent] = useState("Data-Driven Insights");
-  const [fadeIn, setFadeIn] = useState(true);
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const location = useLocation();
 
@@ -30,31 +30,9 @@ const StartingPage = () => {
     }
   }, [location]);
 
-  const handleArtificialClick = () => {
-    navigate("/Artificial");
-  };
-
-  const handleCloudClick = () => {
-    navigate("/cloud");
-  };
-
-  const handleNeptuneClick = () => {
-    navigate("/neptune");
-  };
-
-  const handleSapClick = () => {
-    navigate("/sap");
-  };
 
   const navigate = useNavigate();
 
-  const handleClick = (content) => {
-    setFadeIn(false);
-    setTimeout(() => {
-      setActiveContent(content);
-      setFadeIn(true);
-    }, 300); // duration should match the fade-out transition time
-  };
 
   const products = [
     {
@@ -78,39 +56,17 @@ const StartingPage = () => {
     },
   ];
 
-  // const handlePrev = () => {
-  //   setCurrentIndex((prevIndex) =>
-  //     prevIndex === 0 ? products.length - 3 : prevIndex - 1
-  //   );
-  // };
-
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? products.length - 1 : prevIndex - 1
     );
   };
 
-  // const handleNext = () => {
-  //   setCurrentIndex((prevIndex) =>
-  //     prevIndex === products.length - 3 ? 0 : prevIndex + 1
-  //   );
-  // };
-
-
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === products.length - 1 ? 0 : prevIndex + 1
     );
   };
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     handleNext();
-  //   }, 3000); // Change the interval time as needed
-
-  //   return () => clearInterval(interval);
-  // }, [products.length]);
-
 
   //added for product caruosel
   useEffect(() => {
@@ -311,8 +267,7 @@ const StartingPage = () => {
                   className="text-base lg:text-sm font-lexendaGiga mt-8 lg:mt-10">
                   &#8594; AI and ML can both do a great deal of heavy lifting in web
                   development, especially around the automation of routine.
-                  {/* time-consuming tasks, which helps to improve design and
-                  accelerate the coding process. */}
+
                 </motion.div>
               </motion.h1>
 
@@ -362,321 +317,16 @@ const StartingPage = () => {
         </button>
       </div>
 
-      {/* Additional Content */}
-      <section
-        id="about"
-        className="bg-gray-200 mt-2 rounded-xl text-black py-16 px-6"
-      >
-        <div className="flex flex-col">
-          {/* Heading */}
-          <h3 className="text-3xl font-lexendaGiga  mb-4">
-            What We Offer
-          </h3>
-
-          {/* First Line: Text and Image */}
-          <div className="flex flex-col md:flex-row items-center">
-            <motion.h2
-              className="text-sm font-lexendaGiga font-extralight md:w-3/6 mb-4 md:mb-0"
-              animate={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: -20 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-            >
-              &#8594; Artificial Intelligence & Machine Learning Solutions at TAIL, we
-              leverage cutting-edge AI and ML technologies to empower your
-              business with smarter, data-driven solutions.
-            </motion.h2>
-            <motion.div
-              className="md:w-1/2 flex justify-center md:justify-end"
-              animate={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: 20 }}
-              transition={{ delay: 0.4, duration: 0.5 }}
-            >
-              <img
-                src={Aiimage}
-                alt="Robotic hand"
-                className="w-[300px] h-auto"
-              />
-            </motion.div>
-          </div>
-
-          {/* Second Line: Text and Talk With Us */}
-          <div className="flex flex-col md:flex-row items-center mt-4 space-x-2">
-            <motion.p
-              className="font-lexendaGiga text-sm md:w-1/2 mb-4 md:mb-0"
-              animate={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: -20 }}
-              transition={{ delay: 0.6, duration: 0.5 }}
-            >
-              &#8594; We are a digital transformation firm that provides cutting-edge
-              solutions to a number of companies and technology startups. We
-              assist businesses in reducing risk, increasing compliance,
-              retaining loyal consumers, controlling expenses, attracting top
-              personnel, and other essential tasks. Artificial Intelligence &
-              Machine Learning Solutions at TAIL, we leverage cutting-edge AI
-              and ML technologies to empower your business with smarter,
-              data-driven solutions.
-            </motion.p>
-            <motion.div
-              className="bg-gray-200 text-black p-2 rounded-lg md:w-1/2 border border-gray-200 shadow-xl"
-              animate={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: 20 }}
-              transition={{ delay: 0.8, duration: 0.5 }}
-            >
-              <div className="text-2xl font-lexendaGiga mb-2">Talk With Us</div>
-              <p className="font-lexendaGiga text-sm">
-                Our TAIL assists businesses in creating a digital future that is
-                thoughtfully built. Tell us about your concept, and we will
-                recommend the best technology solution for you.
-              </p>
-              <div className="relative mt-4">
-                <div className="absolute inset-0 rounded-lg"></div>
-                <button className="font-lexendaGiga relative bg-purple-600 text-white px-4 py-2 rounded">
-                  <a href="#contact" className="text-white text-sm ">
-                    Contact us
-                  </a>
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-
-        {/* Technology Showcase Section */}
-        <div className="pt-8">
-          <div className="text-center text-[32px] font-medium font-lexendGiga  mb-8">
-            Transform your business with advanced technologies
-          </div>
-          <div className="flex flex-wrap justify-center gap-4">
-            <div className="relative h-64 w-64 " onClick={handleSapClick}>
-              <motion.div
-                whileHover={{ y: -10 }}
-                className="relative h-full w-full cursor-pointer"
-              >
-                <img
-                  className="h-full w-full object-cover border rounded-lg"
-                  src="https://www.tcs.com/content/dam/global-tcs/en/images/insights/topics/cybersecurity/cyber-security-ai-ml-attack-card.jpg/jcr:content/renditions/cq5dam.thumbnail.1280.765.jpeg"
-                  alt="Sap"
-                />
-                <h1 className="absolute inset-0 flex items-center justify-center text-white bg-black bg-opacity-50 p-2 font-lexendaGiga rounded-lg">
-                  SAP
-                </h1>
-              </motion.div>
-            </div>
-
-            <div className="relative h-64 w-64" onClick={handleArtificialClick}>
-              <motion.div
-                whileHover={{ y: -10 }}
-                className="relative h-full w-full cursor-pointer"
-              >
-                <img
-                  src="https://www.tcs.com/content/dam/global-tcs/en/images/who-we-are/csr/codevita-Card-1330x1270.jpg/jcr:content/renditions/cq5dam.thumbnail.1280.765.jpeg"
-                  className="h-full w-full object-cover border rounded-lg"
-                  alt="Artificial Intelligence"
-                />
-                <h1 className="absolute inset-0 flex items-center justify-center text-white bg-black bg-opacity-50 p-2 rounded-lg  font-lexendaGiga">
-                  Artificial Intelligence
-                </h1>
-              </motion.div>
-            </div>
-
-            <div className="relative h-64 w-64" onClick={handleNeptuneClick}>
-              <motion.div
-                whileHover={{ y: -10 }}
-                className="relative h-full w-full cursor-pointer"
-              >
-                <img
-                  className="h-full w-full object-cover border rounded-lg"
-                  src="https://diginomica.com/sites/default/files/images/2019-01/neptune-software-logo.png"
-                  alt="Neptune - planet 9"
-                />
-                <h1 className="absolute inset-0 flex items-center justify-center font-lexendaGiga text-white bg-black bg-opacity-50 p-2 rounded-lg font-lexendaGiga ">
-                  Neptune - Planet 9
-                </h1>
-              </motion.div>
-            </div>
-
-            <div className="relative h-64 w-64" onClick={handleCloudClick}>
-              <motion.div
-                whileHover={{ y: -10 }}
-                className="relative h-full w-full cursor-pointer border rounded-lg"
-              >
-                <img
-                  className="h-full w-full object-cover border rounded-lg"
-                  src="https://www.tcs.com/content/dam/global-tcs/en/images/what-we-do/services/cyber-security/blogs/cloud-security-automation-cyber-hygiene-card-1330x1270.jpg/jcr:content/renditions/cq5dam.thumbnail.1280.765.jpeg"
-                  alt="Cloud"
-                />
-                <h1 className="absolute inset-0 flex items-center justify-center text-white bg-black bg-opacity-50 p-2 rounded-lg font-lexendaGiga">
-                  Cloud
-                </h1>
-              </motion.div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* About Content */}
+      <About />
 
       {/* service section */}
-      <section
-        id="services"
-        className="h-auto mt-2 rounded-xl bg-purple-500 py-12"
-      >
-        <p className=" font-lexendaGiga  text-4xl text-white ml-4 pt-4 text-left">
-          Services
-        </p>
-        <div className="flex justify-center items-center mt-12">
-          <img
-            src="https://www.chieflearningofficer.com/wp-content/uploads/2024/01/AdobeStock_692023652.jpeg"
-            alt="aiimage"
-            className="w-full max-w-4xl border rounded-lg"
-          />
-        </div>
-        <div className="mx-auto mt-3 py-4 bg-white text-center text-black border rounded-lg text-xl max-w-4xl font-lexendaGiga">
-          ARTIFICIAL INTELLIGENCE MEETS HUMAN CREATIVITY
-        </div>
-        <div className="flex flex-col md:flex-row gap-3 justify-center items-center pt-12 pb-12">
-          <motion.div
-            className="h-auto w-11/12 md:w-96 bg-white rounded-lg flex flex-col md:flex-row justify-center items-start p-4"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-          >
-            <img className="h-28" src={leftbrain} alt="ai" />
-            <div className="pt-4 md:pt-0 sm:pl-4 text-gray-500">
-              <p className="font-bold font-lexendaGiga text-md">Artificial intelligence</p>
-              <p className=" font-lexendaGiga text-sm">
-                AI is the simulation of human intelligence in machines designed
-                to think and act like humans.
-              </p>
-            </div>
-          </motion.div>
-          <motion.div
-            className="h-56 w-11/12 md:w-96 bg-white rounded-lg flex justify-center items-center"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-          >
-            <motion.img className="h-full p-4" src={midbrain} alt="ai" />
-          </motion.div>
-          <motion.div
-            className="h-auto w-11/12 md:w-96 bg-white rounded-lg flex flex-col md:flex-row justify-center items-start p-4"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-          >
-            <div className="pt-4 md:pt-0 md:pl-4 text-gray-500">
-              <p className="font-bold font-lexendaGiga text-md">Machine Learning</p>
-              <p className="font-lexendaGiga text-sm">
-                ML is a subset of AI that enables systems to learn from data,
-                identify patterns, and make decisions with minimal human
-                intervention.
-              </p>
-            </div>
-            <img
-              className="h-32 pt-4 md:pt-0 md:pl-4"
-              src="https://img.freepik.com/premium-photo/logo-artificial-intelligence-app_278455-29047.jpg"
-              alt="ai"
-            />
-          </motion.div>
-        </div>
-      </section>
+      <Services />
 
-      <div className="text-4xl font-lexendaGiga ml-6 pb-0 py-12">
-        <p>Insights</p>
-      </div>
-      <div className="py-6 px-6 bg-white flex flex-col lg:flex-row items-center font-semibold font-sans">
-        <div className="lg:w-1/4 text-black space-y-4 ">
-          {[
-            "Data-Driven Insights",
-            "Automation & Efficiency",
-            "Personalized Experiences",
-            "Predictive Capabilities",
-            "Transforming Industries",
-            "Ethical Considerations",
-            "Continuous Innovation",
-          ].map((content) => (
-            <div
-              key={content}
-              className={`cursor-pointer bg-gray-200 ${activeContent === content
-                ? "bg-purple-500 text-white "
-                : "hover:bg-purple-600 hover:text-white "
-                } transition-colors duration-300 rounded-lg px-4 py-2`}
-              onClick={() => handleClick(content)}
-            >
-              <h3 className="text-md  mb-2 font-lexendaGiga">{content}</h3>
-            </div>
-          ))}
-        </div>
+      {/* Insight section */}
+      <Insight />
 
-        <div
-          className={`lg:w-1/2 px-28 py-4 transition-opacity duration-300 ${fadeIn ? "opacity-80" : "opacity-0"
-            }`}
-        >
-          <img
-            src={getImageUrl()}
-            alt="Description"
-            className="rounded-lg shadow-lg"
-          />
-        </div>
-
-        {activeContent && (
-          <div
-            className={`lg:w-1/4 mr-12 font-medium font-sans text-black space-y-6 transition-opacity duration-300 ${fadeIn ? "opacity-100" : "opacity-0"
-              }`}
-          >
-            {getContent()}
-          </div>
-        )}
-      </div>
-
-      {/* <section
-        id="products"
-        className="py-16 px-6 bg-gray-200 font-semibold font-Georgia font-serif rounded-xl"
-      >
-        <div className="w-full mb-24">
-          <h2 className="text-left text-black text-4xl font-semibold">
-            PRODUCTS
-          </h2>
-         
-        </div>
-        <div className="relative flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0">
-          {products
-            .slice(currentIndex, currentIndex + 3)
-            .map((product, index) => (
-              <div
-                key={index}
-                className="relative bg-black cursor-pointer transition-transform duration-300 transform hover:scale-105 rounded-lg"
-              >
-                <Link to={`/product/${encodeURIComponent(product.title)}`}>
-                  <img
-                    src={product.imgSrc}
-                    alt={product.title}
-                    className="rounded-lg shadow-lg w-full h-48 md:h-full object-cover"
-                  />
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <h3 className="text-lg font-bold">{product.title}</h3>
-                    <span className="text-sm underline">READ MORE</span>
-                  </div>
-                </Link>
-              </div>
-            ))}
-          <div className="absolute top-[-50px] right-0 flex space-x-4">
-            <button
-              className={`text-black ${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : ""
-                }`}
-              onClick={handlePrev}
-              disabled={currentIndex === 0}
-            >
-              &larr;
-            </button>
-            <button
-              className={`text-black ${currentIndex >= products.length - 3
-                ? "opacity-50 cursor-not-allowed"
-                : ""
-                }`}
-              onClick={handleNext}
-              disabled={currentIndex >= products.length - 3}
-            >
-              &rarr;
-            </button>
-          </div>
-        </div>
-      </section> */}
-
+      {/* Products Section */}
       <section
         id="products"
         className="py-16 px-6 bg-gray-200 font-lexendaGiga rounded-xl relative"
@@ -732,79 +382,9 @@ const StartingPage = () => {
           </button>
         </div>
       </section>
+      {/* contact sectioon */}
+      <Contact />
 
-      <section
-        id="contact"
-        className="py-16 px-4 mt-2 bg-purple-600 text-white font-Georgia font-serif rounded-xl"
-      >
-        <div className="mb-16 text-left md:text-left">
-          <h2 className="text-3xl font-lexendaGiga">About Us</h2>
-        </div>
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-lg">
-              <h2 className="text-xl font-lexendaGiga font-bold mb-2">
-                Tail AI Products
-              </h2>
-              <ul className="font-lexendaGiga text-sm ">
-                <li>&#8594; RULE ENGINE</li>
-                <li>&#8594; LABEL DESIGNER</li>
-                <li>&#8594; API GENISIS</li>
-                <li>&#8594; TOUCHLESS APP</li>
-              </ul>
-              <h2 className="text-xl font-lexendaGiga font-bold mt-12">
-                Our Partners
-              </h2>
-              <ul>
-                <li className="mt-2 text-sm font-lexendaGiga">
-                  &#8594; JHONSON & JHONSON
-                  <br />
-                  &#8594; HERITAGE
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h2 className="text-xl  font-lexendaGiga font-bold mb-2">Locations</h2>
-              <ul className="text-sm font-lexendaGiga">
-                <li>
-                  India
-                  <br />
-                  Suite #601, Aditya Trade Center
-                  <br />
-                  Ameerpet
-                  <br />
-                  Hyderabad - 500038
-                </li>
-                <li className="mt-16 text-sm">
-                  Frisco, Texas
-                  <br />
-                  USA
-                  <br />
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h2 className="text-xl  font-lexendaGiga  font-bold mb-2">Contact us</h2>
-              <div className="text-sm font-lexendaGiga">
-                <p>hrsupport@tail.com</p>
-                <p>(+91) 8121219737</p>
-              </div>
-              <p className="text-sm mt-32 font-lexendaGiga">
-                Subscribe to get emails about new products and features from
-                TAIL CORP
-              </p>
-            </div>
-          </div>
-
-          <div className="text-center font-lexendaGiga mt-12 text-sm">
-            <p>&copy; 2025 Tail Theme. All Rights Reserved</p>
-          </div>
-        </div>
-      </section>
-
-      {/* </main> */}
     </div>
   );
 };

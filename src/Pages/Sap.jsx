@@ -10,24 +10,24 @@ const Sap = () => {
 
   return (
     <div className="px-4">
-      <h1 className="pt-12 font-semibold pl-2 md:pl-16 font-Georgia font-serif text-2xl md:text-4xl">
+      <h1 className="pt-12  pl-2 md:pl-16 font-lexendaGiga  text-2xl md:text-4xl">
         SAP
       </h1>
-      <p className="font-poppins font-sans pl-2 md:pl-16 pt-6 text-base md:text-xl">
-        SAP skills are the ability to use the SAP software suite to solve
+      <p className="font-lexendaGiga pl-2 md:pl-16 pt-6 text-base md:text-md text-gray-700">
+        &#8594; SAP skills are the ability to use the SAP software suite to solve
         business problems. The suite is a set of integrated applications that
         allow organizations to manage their business processes. Some of the
         skills in this list require more time or even certification, while
         others could be learned fairly fast.
       </p>
       <img
-        className="w-full h-auto ml-2 md:ml-16 mt-4 rounded-xl"
+        className="w-[90%] h-auto ml-2 md:ml-16 mt-4 rounded-xl"
         src="https://t4.ftcdn.net/jpg/04/74/19/77/360_F_474197731_U4rprIWgfeqBoRp5JXrXgIrrzNvuFixR.jpg"
         alt="Sap"
       />
       <div>
-        <h1 className="font-semibold pl-2 md:pl-16 pt-12 font-Georgia font-serif text-2xl md:text-4xl">
-          SAP UI 5
+        <h1 className=" pl-2 md:pl-16 pt-12 font-lexendaGiga  text-2xl md:text-4xl">
+          SAP UI5
         </h1>
         <div className="flex flex-col lg:flex-row justify-center font-poppins font-sans gap-8 lg:gap-12 items-center">
           <div className="pl-2 md:pl-12 pt-8 lg:pt-12">
@@ -37,26 +37,26 @@ const Sap = () => {
               alt="Sapui5"
             />
           </div>
-          <div className="pt-6 text-base md:text-xl font-poppins font-sans">
+          <div className="pt-6 text-base md:text-md text-gray-700 font-lexendaGiga">
             <p>
-              SAPUI5 is a framework for creating online apps that are
+              &#8594; SAPUI5 is a framework for creating online apps that are
               responsive. <br />
               Web applications that are responsive adapt their user interfaces
               to desktop, tablet, and mobile devices.
               <br />
-              There's only one app to rule them all.
+              &#8594; There's only one app to rule them all.
               <br />
-              SAPUI5 is a modern, web-based technology that supports the
-              development of responsive, interactive applications <br />
-              while ABAP is a solid programming language that has been used for
+              &#8594; SAPUI5 is a modern, web-based technology that supports the
+              development of responsive, interactive applications. <br />
+              &#8594; while ABAP is a solid programming language that has been used for
               decades.
               <br />
-              Both are two different technologies used in developing
+              &#8594; Both are two different technologies used in developing
               applications for the SAP Fiori ecosystem.
             </p>
           </div>
         </div>
-        <p className="text-base md:text-xl font-poppins font-sans pl-2 md:pl-32 pt-4">
+        <p className="text-base md:text-md font-lexendaGiga text-gray-700 pl-2 md:pl-32 pt-4">
           SAPUI5 is an HTML5 framework for creating cross-platform,
           enterprise-grade web applications in an efficient way. What started as
           a small project is now one of the most successful technologies ever
@@ -71,10 +71,10 @@ const Sap = () => {
 
       {/* SAP Fiori */}
       <div>
-        <h1 className="font-semibold pl-2 md:pl-16 pt-16 font-Georgia font-serif text-2xl md:text-4xl">
+        <h1 className="font-lexendaGiga pl-2 md:pl-16 pt-16  text-xl md:text-4xl">
           SAP Fiori
         </h1>
-        <div className="flex flex-col lg:flex-row justify-center text-base md:text-xl pl-2 md:pl-24 font-poppins font-sans gap-8 lg:gap-4 items-center">
+        <div className="flex flex-col lg:flex-row justify-center text-base md:text-md pl-2 md:pl-24 font-lexendaGiga text-gray-700 gap-8 lg:gap-4 items-center">
           <p>
             SAP Fiori is a design system that enables you to create business
             apps with a consumer-grade user experience, <br />
@@ -97,7 +97,7 @@ const Sap = () => {
             />
           </div>
         </div>
-        <p className="text-base md:text-xl font-poppins font-sans pl-2 md:pl-24 pt-4">
+        <p className="text-base md:text-md font-lexendaGiga text-gray-700 pl-2 md:pl-24 pt-4">
           SAPUI5 is an HTML5 framework for creating cross-platform,
           enterprise-grade web applications in an efficient way. What started as
           a small project is now one of the most successful technologies ever
@@ -111,13 +111,13 @@ const Sap = () => {
       </div>
 
       {/* SAP BTP */}
-      <h1 className="font-semibold pl-2 md:pl-16 pt-12 font-Georgia font-serif text-2xl md:text-4xl">
+      <h1 className=" pl-2 md:pl-16 pt-12 font-lexendaGiga text-2xl md:text-4xl">
         SAP BTP
       </h1>
-      <div className="flex flex-col lg:flex-row justify-center font-poppins font-sans gap-8 lg:gap-12 items-center">
-        <div className="pl-2 md:pl-16 pt-6 text-base md:text-xl">
+      <div className="flex flex-col lg:flex-row justify-center font-lexendaGiga gap-8 lg:gap-12 items-center">
+        <div className="pl-2 md:pl-16 pt-6 text-base md:text-md text-gray-700">
           <p>
-            SAP Business Technology Platform (SAP BTP) is a platform focused on
+            &#8594; SAP Business Technology Platform (SAP BTP) is a platform focused on
             turning data into actionable business plans, particularly by
             leveraging tools found in an intelligent enterprise. SAP BTP
             contains many solutions, tools, and products under its umbrella.
@@ -129,17 +129,7 @@ const Sap = () => {
               alt="BTP"
             />
           </div>
-          {/* <p className="pt-8 pb-3">
-            SAP BTP provides customers with a robust set of intelligent
-            technologies, including SAP Intelligent Robotic Process Automation,
-            SAP Conversational AI, SAP AI Business Services, SAP Edge Services,
-            SAP Internet of Things, and Askdata. With these options, specific,
-            lower-level business services such as tax assignment and collection
-            can be automated, and chatbots can be developed to interact with
-            those looking for assistance, freeing up employees to perform other
-            tasks. This automation increases efficiency and can provide stronger
-            database and solution security.
-          </p> */}
+         
         </div>
       </div>
 

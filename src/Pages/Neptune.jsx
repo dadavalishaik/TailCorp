@@ -10,16 +10,16 @@ const Neptune = () => {
   return (
     <div className="mt-6 font-serif font-Georgia px-4 md:px-8 lg:px-16">
       <h1 className="text-3xl font-semibold">Neptune - Planet 9</h1>
-      <div className="font-normal font-sans text-base md:text-xl pt-4 md:pt-8">
-        Neptune Planet 9 is a rapid application development platform for your
+      <div className="font-lexendaGiga text-base text-gray-700 md:text-sm pt-4 md:pt-8">
+        &#8594;  Neptune Planet 9 is a rapid application development platform for your
         business apps. Neptune will allow you to build and manage your business
         apps and APIs, regardless of the underlying technology or architecture.
       </div>
 
       <div className="flex flex-col lg:flex-row items-start pt-6 md:pt-12">
-        <div className="w-full lg:w-1/2 p-0 md:p-6 text-base md:text-xl font-normal font-sans">
+        <div className="w-full lg:w-1/2 p-0 md:p-6 text-base md:text-sm text-gray-700 font-lexendaGiga">
           <p className="pt-6">
-            Planet 9 is a self-contained stateless nodejs server, which listens
+            &#8594; Planet 9 is a self-contained stateless nodejs server, which listens
             to a pre-configured network interface. It supports Linux, OSX,
             Windows, and Raspberry Pi. It can be thought of as both an app
             development platform and an app run time. When a user creates an
@@ -28,7 +28,7 @@ const Neptune = () => {
             Planet 9 runtime.
           </p>
           <p className="pt-6">
-            In a high volume environment, more than one server could be needed.
+            &#8594; In a high volume environment, more than one server could be needed.
             From a Planet 9 standpoint, this is not problematic since the nodes
             themselves do not have to sync between each other. Planet 9 runs
             fine in Docker and can be set up with an orchestration tool such as
@@ -50,9 +50,9 @@ const Neptune = () => {
           src="https://community-neptune-software.imgix.net/page_featured_image/c_77991_82847a36-70cd-4b05-872c-81a4b378074f.PNG?auto=format&h=900&w=1600&fit=max"
           alt="Neptune DXP"
         />
-        <div className="font-normal font-sans text-base md:text-xl w-full lg:w-1/2">
+        <div className="font-lexendaGiga text-base md:text-sm w-full text-gray-700 lg:w-1/2">
           <p className="pt-6">
-            With fragmentation on the rise in IT, unifying your UX has never
+            &#8594;  With fragmentation on the rise in IT, unifying your UX has never
             been more critical. But application development the old-fashioned
             way opens the enterprise up to unacceptable risk. Get back control
             with Neptune DXP - Open Edition [Planet9] and standardize app
