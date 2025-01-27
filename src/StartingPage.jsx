@@ -332,16 +332,14 @@ const StartingPage = () => {
         className="py-16 px-6 bg-gray-200 font-lexendaGiga rounded-xl relative"
       >
         <div className="w-full mb-8">
-          <h2 className="text-left text-black text-3xl ">
-            Products
-          </h2>
+          <h2 className="text-left text-black text-3xl">Products</h2>
         </div>
 
         {/* Carousel Container */}
         <div className="relative flex items-center justify-center">
           {/* Left Arrow */}
           <button
-            className={` left-6 text-3xl font-bold ${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : ""
+            className={`absolute left-6 text-3xl font-bold ${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : ""
               }`}
             onClick={handlePrev}
             disabled={currentIndex === 0}
@@ -359,7 +357,7 @@ const StartingPage = () => {
                 <img
                   src={products[currentIndex].imgSrc}
                   alt={products[currentIndex].title}
-                  className="rounded-lg shadow-lg w-full h-48 md:h-full object-cover"
+                  className="rounded-lg shadow-lg w-full h-64 object-cover"
                 />
                 <div className="absolute bottom-4 left-4 text-white">
                   <h3 className="text-lg font-bold">{products[currentIndex].title}</h3>
@@ -371,7 +369,7 @@ const StartingPage = () => {
 
           {/* Right Arrow */}
           <button
-            className={` right-4 text-3xl font-bold ${currentIndex === products.length - 1
+            className={`absolute right-6 text-3xl font-bold ${currentIndex === products.length - 1
               ? "opacity-50 cursor-not-allowed"
               : ""
               }`}
