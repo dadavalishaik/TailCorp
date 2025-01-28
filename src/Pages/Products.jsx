@@ -50,7 +50,7 @@ function Products() {
        
         <section
             id="products"
-            className="py-16 px-6 bg-gray-200 font-lexendaGiga rounded-xl relative"
+            className="py-16 px-6 bg-gray-200 font-lexendaGiga  relative"
         >
             <div className="w-full mb-8">
                 <h2 className="text-left text-black text-3xl ">

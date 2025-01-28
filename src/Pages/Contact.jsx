@@ -4,7 +4,7 @@ function Contact() {
   return (
     <section
     id="contact"
-    className="py-16 px-4 mt-2 bg-purple-600 text-white font-Georgia font-serif rounded-xl"
+    className="py-16 px-4  bg-purple-600 text-white font-Georgia font-serif "
   >
     <div className="mb-16 text-left md:text-left">
       <h2 className="text-3xl font-lexendaGiga">About Us</h2>

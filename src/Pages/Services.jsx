@@ -11,7 +11,7 @@ function Services() {
     return (
         <section
             id="services"
-            className="h-auto mt-2 rounded-xl bg-purple-500 py-12"
+            className="h-auto  bg-purple-500 py-12"
         >
             <p className=" font-lexendaGiga  text-4xl text-white ml-4 pt-4 text-left">
                 Services

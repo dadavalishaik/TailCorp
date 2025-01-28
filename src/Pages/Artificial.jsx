@@ -8,14 +8,14 @@ const Ai = () => {
   }, []);
 
   return (
-    <div className=" ">
+    <div className=" p-4">
       <div className="flex flex-col relative min-h-screen">
         <h1 className="text-xl font-semibold font-lexendaGiga pl-6 pt-12 pb-2">
           Artificial Intelligence
         </h1>
         <div className="flex-1 relative">
           <img
-            className="h-auto w-full md:w-10/12 mx-auto rounded-lg"
+            className="h-auto w-full md:w-10/12 mx-auto rounded-lg "
             src="/AnimatedVideo.gif"
             alt="Animated GIF"
           />

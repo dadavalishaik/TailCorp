@@ -19,8 +19,8 @@ const Cloud = () => {
           alt="Animated GIF"
         />
       </div>
-      <p className="text-base md:text-lg lg:text-xl pt-6 font-normal font-sans">
-        The cloud is an extensive network of remote servers around the world.
+      <p className="text-base md:text-lg lg:text-sm pt-6 font-lexendaGiga text-gray-700">
+        &#8594; The cloud is an extensive network of remote servers around the world.
         These servers store and manage data, run applications, and deliver
         content and services like streaming videos, web mail, and office
         productivity software over the internet. Cloud content management is the
@@ -29,15 +29,16 @@ const Cloud = () => {
         provides more flexibility and adaptability in an ever-changing digital
         environment compared to software hosted on premises.
       </p>
-      <div className="flex flex-col lg:flex-row items-start pt-6 text-base md:text-lg lg:text-xl font-sans font-normal">
+      <div className="flex flex-col lg:flex-row items-start pt-6 text-base md:text-lg lg:text-sm  font-lexendaGiga text-gray-700">
         <div className="w-full lg:w-1/2 pb-3">
           <p className="pt-4">
-            Multicloud refers to using services from more than one public cloud
+            &#8594; Multicloud refers to using services from more than one public cloud
             provider at the same time. A multicloud environment allows your
             cloud environments to be private, public, or a combination of both.
           </p>
           <p className="pt-4">
-            To get the most out of multicloud architecture, it’s important to be
+
+            &#8594; To get the most out of multicloud architecture, it’s important to be
             able to track, secure, and manage your workloads consistently across
             all your environments from a single interface, similar to if you
             were running them on a single platform. The more cloud providers you
@@ -47,7 +48,7 @@ const Cloud = () => {
             services.
           </p>
           <p className="pt-4">
-            Multicloud is the practice of using the services of multiple cloud
+            &#8594; Multicloud is the practice of using the services of multiple cloud
             providers to optimize workload performance, increase flexibility,
             and mitigate the risks of relying on any one vendor.
           </p>
